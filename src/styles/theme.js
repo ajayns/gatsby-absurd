@@ -11,17 +11,20 @@ const theme = {
   color: {
     white: {
       regular: '#FFFFFF',
+      dark: '#F6F6F6',
     },
+    // TODO: remove
     blue: {
       light: '#D9DDF2',
       regular: '#3770FF',
       dark: '#353576',
     },
     black: {
-      lighter: '#FAFBFB',
-      light: '#69757A',
-      regular: '#273339',
+      lighter: '#ABA8AF',
+      light: '#564F62',
+      regular: '#211E26',
     },
+    primary: '#AADDCC',
   },
   screen: {
     xs: '575px',
