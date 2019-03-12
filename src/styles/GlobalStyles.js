@@ -8,10 +8,11 @@ const GlobalStyles = createGlobalStyle`
   ${normalize};
 
   body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: ${props => props.theme.font.secondary};
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
+    font-family: ${props => props.theme.font.primary};
     margin: 0;
     font-weight: bold;
   }
@@ -21,7 +22,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-family: ${props => props.theme.font.secondary};
     ${props => props.theme.font_size.small};
     text-transform: uppercase;
     color: ${props => props.theme.color.black.light};

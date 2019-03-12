@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`nunito sans\:400,700`],
+        fonts: [`average`, `prata`],
       },
     },
     {
