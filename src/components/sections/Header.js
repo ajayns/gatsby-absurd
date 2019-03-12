@@ -1,29 +1,55 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Image from '@common/Image';
-import { Container, Button } from '@components/global';
+import { Container } from '@components/global';
 
-const Header = props => (
-  <header style={{ padding: '40px 0', marginTop: 80 }}>
-    <Container>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <div style={{ width: 300 }}>
-          <Image />
-        </div>
-        <div style={{ padding: 40 }}>
-          <h1>Hi people</h1>
-          <p>
-            Welcome to your new Gatsby site. <br /> Now go build something
-            great.
-          </p>
-          <Button as={Link} to="/page-2/">
-            Go to page 2 &nbsp; &rarr;
-          </Button>
-        </div>
-      </div>
-    </Container>
-  </header>
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        art_build: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "build" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <HeaderWrapper>
+        <Container>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div>
+              <Img
+                fluid={data.art_build.childImageSharp.fluid}
+                style={{ width: 700, maxWidth: '100%', marginBottom: -28 }}
+              />
+            </div>
+            <div style={{ paddingLeft: 40 }}>
+              <h1>
+                Build highly <br />
+                performant sites <br />
+                amazingly fast
+              </h1>
+              <br />
+              <p>with Gatsby of course</p>
+            </div>
+          </div>
+        </Container>
+      </HeaderWrapper>
+    )}
+  />
 );
+
+const HeaderWrapper = styled.header`
+  background-color: ${props => props.theme.color.primary};
+  margin-top: 40px;
+`;
 
 export default Header;
