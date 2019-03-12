@@ -11,24 +11,46 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${props => props.theme.font.secondary};
   }
 
-  h1, h2, h3, h4 {
-    font-family: ${props => props.theme.font.primary};
+  h1, h2, h3 {
     margin: 0;
-    font-weight: bold;
+  }
+
+  h1, h2 {
+    font-family: ${props => props.theme.font.primary};
   }
 
   h1 {
-    ${props => props.theme.font_size.large};
+    ${props => props.theme.font_size.xlarge};
+  }
+
+  h2 {
+    ${props => props.theme.font_size.larger};
   }
 
   h3 {
-    ${props => props.theme.font_size.small};
-    text-transform: uppercase;
-    color: ${props => props.theme.color.black.light};
+    ${props => props.theme.font_size.large};
   }
 
   p {
     ${props => props.theme.font_size.regular};
+  }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    h1 {
+      ${props => props.theme.font_size.larger};
+    }
+
+    h2 {
+      ${props => props.theme.font_size.large};
+    }
+
+    h3 {
+      ${props => props.theme.font_size.regular};
+    }
+
+    p {
+      ${props => props.theme.font_size.small};
+    }
   }
 
   button {
