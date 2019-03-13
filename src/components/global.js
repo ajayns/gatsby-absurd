@@ -33,5 +33,10 @@ export const Section = styled.section`
   padding: 96px 0;
 
   ${props =>
-    props.accent && `background-color: ${props.theme.color.black.lighter}`}
+    props.accent &&
+    `background-color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.white.dark
+        : props.theme.color.primary
+    }`};
 `;
