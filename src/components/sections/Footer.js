@@ -32,7 +32,16 @@ const Footer = () => (
         alignItems: 'center',
       }}
     >
-      <Copyright>(c) Devfolio</Copyright>
+      <Copyright>
+        <h2>Absurd</h2>
+        <span>
+          Illustrations by
+          {` `}
+          <ExternalLink href="https://twitter.com/diana_valeanu">
+            @diana_valeanu
+          </ExternalLink>
+        </span>
+      </Copyright>
       <SocialIcons>
         {SOCIAL.map(({ icon, link }) => (
           <ExternalLink href={link}>{icon()}</ExternalLink>
@@ -46,7 +55,7 @@ const SocialIcons = styled.div`
   display: flex;
 
   svg {
-    color: ${props => props.theme.color.white.regular};
+    color: ${props => props.theme.color.black.regular};
     margin: 0 8px;
     width: 24px;
     height: 24px;
@@ -54,15 +63,19 @@ const SocialIcons = styled.div`
 `;
 
 const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.blue.dark};
-  padding: 24px 0;
+  background-color: ${props => props.theme.color.primary};
+  padding: 32px 0;
 `;
 
 const Copyright = styled.div`
   font-family: ${props => props.theme.font.secondary};
   ${props => props.theme.font_size.small};
-  text-transform: uppercase;
-  color: ${props => props.theme.color.white.regular};
+  color: ${props => props.theme.color.black.regular};
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default Footer;
