@@ -30,7 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 96px 0;
+  padding: 128px 0;
 
   ${props =>
     props.accent &&

@@ -43,12 +43,12 @@ const Footer = () => (
     `}
     render={data => (
       <React.Fragment>
-        <Figure>
+        <Art>
           <Img
             fluid={data.art_pot.childImageSharp.fluid}
             style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
           />
-        </Figure>
+        </Art>
         <FooterWrapper>
           <Container
             style={{
@@ -106,10 +106,11 @@ const Copyright = styled.div`
   }
 `;
 
-const Figure = styled.figure`
+const Art = styled.figure`
   display: flex;
   justify-content: center;
   margin: 0;
+  margin-top: 96px;
 `;
 
 export default Footer;

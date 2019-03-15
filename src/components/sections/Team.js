@@ -69,7 +69,7 @@ const Team = () => (
     render={data => (
       <Section id="team" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1 style={{ marginBottom: 40 }}>The Team</h1>
+          <h1>The Team</h1>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
@@ -98,12 +98,13 @@ const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-template-rows: min-content;
-  grid-gap: 64px;
+  grid-gap: 50px;
   justify-content: space-between;
-  width: 65%;
+  width: 60%;
+  margin-top: 72px;
 `;
 
-const Art = styled.div`
+const Art = styled.figure`
   width: 800px;
   margin: -80px 0;
   position: absolute;
