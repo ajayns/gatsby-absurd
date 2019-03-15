@@ -50,13 +50,7 @@ const Footer = () => (
           />
         </Art>
         <FooterWrapper>
-          <Container
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
+          <StyledContainer>
             <Copyright>
               <h2>Absurd</h2>
               <span>
@@ -72,7 +66,7 @@ const Footer = () => (
                 <ExternalLink href={link}>{icon()}</ExternalLink>
               ))}
             </SocialIcons>
-          </Container>
+          </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
     )}
@@ -87,6 +81,10 @@ const SocialIcons = styled.div`
     margin: 0 8px;
     width: 24px;
     height: 24px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-top: 40px;
   }
 `;
 
@@ -111,6 +109,17 @@ const Art = styled.figure`
   justify-content: center;
   margin: 0;
   margin-top: 96px;
+`;
+
+const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export default Footer;
