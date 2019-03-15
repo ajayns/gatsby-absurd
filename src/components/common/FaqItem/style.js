@@ -6,9 +6,7 @@ export const Wrapper = styled.div`
   }
 
   .faq {
-    border-radius: 5px;
-    background-color: white;
-    margin: 16px 0;
+    border-bottom: 2px solid ${props => props.theme.color.black.lighter};
   }
 
   .faq-title {
@@ -21,32 +19,37 @@ export const Wrapper = styled.div`
     cursor: pointer;
 
     font-family: ${props => props.theme.font.secondary};
+    ${props => props.theme.font_size.regular};
     font-weight: bold;
-    padding: 32px;
+    padding: 24px;
     padding-right: 72px;
+    padding-left: 16px;
     position: relative;
 
     &::after {
-      content: '+';
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid ${props => props.theme.color.black.regular};
+      border-bottom: 2px solid ${props => props.theme.color.black.regular};
       position: absolute;
-      top: 30%;
-      right: 24px;
-      font-size: 24px;
-      font-weight: normal;
+      top: 34px;
+      right: 36px;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out;
     }
 
     &.active {
-      ::after {
-        content: '-';
-        top: 28%;
-        right: 28px;
+      &::after {
+        transform: rotate(135deg);
       }
     }
   }
 
   .faq-content {
-    padding: 32px;
-    padding-top: 0;
+    padding: 0 72px 32px 16px;
     line-height: 26px;
+    ${props => props.theme.font_size.small};
   }
 `;
