@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata`],
+        fonts: [`average`, `prata\:400,700`],
       },
     },
     {
