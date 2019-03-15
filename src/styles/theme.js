@@ -15,12 +15,6 @@ const theme = {
       regular: '#FFFFFF',
       dark: '#F6F6F6',
     },
-    // TODO: remove
-    blue: {
-      light: '#D9DDF2',
-      regular: '#3770FF',
-      dark: '#353576',
-    },
     black: {
       lighter: '#ABA8AF',
       light: '#564F62',
