@@ -102,6 +102,19 @@ const TeamGrid = styled.div`
   justify-content: space-between;
   width: 60%;
   margin-top: 72px;
+
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    justify-content: start;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    grid-gap: 24px;
+  }
 `;
 
 const Art = styled.figure`
@@ -110,6 +123,14 @@ const Art = styled.figure`
   position: absolute;
   top: 0;
   left: 70%;
+
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    top: 20%;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: none;
+  }
 `;
 
 const Title = styled.p`
