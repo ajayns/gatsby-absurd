@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
@@ -39,18 +41,39 @@ const LOGOS = [
 ];
 
 const UsedBy = () => (
-  <Section accent>
-    <StyledContainer>
-      <div width="50%">
-        <h1>Used by biggest in tech</h1>
-        <LogoGrid>
-          {LOGOS.map(({ logo, link }) => (
-            <ExternalLink href={link}>{logo()}</ExternalLink>
-          ))}
-        </LogoGrid>
-      </div>
-    </StyledContainer>
-  </Section>
+  <StaticQuery
+    query={graphql`
+      query {
+        art_story: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "tell_story" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Section accent>
+        <StyledContainer>
+          <div width="50%">
+            <h1>Used by biggest in tech</h1>
+            <LogoGrid>
+              {LOGOS.map(({ logo, link }) => (
+                <ExternalLink href={link}>{logo()}</ExternalLink>
+              ))}
+            </LogoGrid>
+          </div>
+          <Art>
+            <Img fluid={data.art_story.childImageSharp.fluid} />
+          </Art>
+        </StyledContainer>
+      </Section>
+    )}
+  />
 );
 
 const LogoGrid = styled.div`
@@ -71,6 +94,13 @@ const StyledContainer = styled(Container)`
   display: flex;
   justify-content: flex-end;
   position: relative;
+`;
+
+const Art = styled.figure`
+  width: 600px;
+  position: absolute;
+  top: -12%;
+  left: -10%;
 `;
 
 export default UsedBy;
