@@ -6,14 +6,13 @@ import { Container } from '@components/global';
 import {
   Nav,
   NavItem,
-  LogoContainer,
+  Brand,
   StyledContainer,
   NavListWrapper,
   MobileMenu,
   Mobile,
 } from './style';
 
-import { ReactComponent as DevfolioLogo } from '@static/logo_devfolio.svg';
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
 const NAV_ITEMS = ['About', 'Gallery', 'FAQ'];
@@ -59,10 +58,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <LogoContainer>
-            <DevfolioLogo />
-          </LogoContainer>
-
+          <Brand>Absurd</Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
               <MenuIcon />
