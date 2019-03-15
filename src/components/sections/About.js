@@ -57,14 +57,14 @@ const About = () => (
                 'cause I'll kill the motherfucker, know what I'm sayin'?
               </p>
             </div>
-            <div>
-              <Art fluid={data.art_fast.childImageSharp.fluid} />
-            </div>
+            <Art>
+              <Img fluid={data.art_fast.childImageSharp.fluid} />
+            </Art>
           </Grid>
           <Grid inverse>
-            <div>
-              <Art fluid={data.art_learn.childImageSharp.fluid} />
-            </div>
+            <Art>
+              <Img fluid={data.art_learn.childImageSharp.fluid} />
+            </Art>
             <div>
               <h2>This is heading two</h2>
               <p>
@@ -87,9 +87,9 @@ const About = () => (
                 'cause I'll kill the motherfucker, know what I'm sayin'?
               </p>
             </div>
-            <div>
-              <Art fluid={data.art_ideas.childImageSharp.fluid} />
-            </div>
+            <Art>
+              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+            </Art>
           </Grid>
         </Container>
       </Section>
@@ -116,11 +116,30 @@ const Grid = styled.div`
   h2 {
     margin-bottom: 16px;
   }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-bottom: 96px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+
+    ${props =>
+      props.inverse &&
+      `
+        ${Art} {
+          order: 2;
+        }
+    `}
+  }
 `;
 
-const Art = styled(Img)`
-  width: 380px;
-  max-width: 100%;
+const Art = styled.figure`
+  margin: 0;
+  max-width: 380px;
+  width: 100%;
 `;
 
 export default About;
