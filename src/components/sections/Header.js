@@ -50,7 +50,7 @@ const Header = () => (
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
   padding-top: 128px;
-  margin-top: 96px;
+  margin-top: -96px;
 `;
 
 export default Header;
