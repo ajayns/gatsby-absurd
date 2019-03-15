@@ -59,7 +59,7 @@ const UsedBy = () => (
     render={data => (
       <Section id="brands" accent>
         <StyledContainer>
-          <div width="50%">
+          <div>
             <h1>Used by biggest in tech</h1>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
@@ -88,19 +88,37 @@ const LogoGrid = styled.div`
       width: 100%;
     }
   }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: flex-end;
   position: relative;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    justify-content: center;
+  }
 `;
 
 const Art = styled.figure`
   width: 600px;
   position: absolute;
   top: -12%;
-  left: -10%;
+  right: 50%;
+
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    top: 0;
+    right: 61%;
+    width: 500px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: none;
+  }
 `;
 
 export default UsedBy;
