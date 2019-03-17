@@ -88,6 +88,9 @@ const Team = () => (
           <Art>
             <Img fluid={data.art_team.childImageSharp.fluid} />
           </Art>
+          <ArtMobile>
+            <Img fluid={data.art_team.childImageSharp.fluid} />
+          </ArtMobile>
         </Container>
       </Section>
     )}
@@ -130,6 +133,18 @@ const Art = styled.figure`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     display: none;
+  }
+`;
+
+const ArtMobile = styled.figure`
+  width: 100%;
+  margin: 0;
+  display: none;
+  margin-top: 64px;
+  margin-bottom: -60%;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: block;
   }
 `;
 
