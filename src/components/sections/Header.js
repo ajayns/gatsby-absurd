@@ -46,8 +46,7 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
-  padding-top: 128px;
-  margin-top: -96px;
+  padding-top: 96px;
 `;
 
 const Art = styled.figure`
