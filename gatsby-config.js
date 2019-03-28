@@ -24,11 +24,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-landing`,
-        short_name: `starter`,
+        name: `Absurd`,
+        short_name: `absurd`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#8bd8ed`,
+        theme_color: `#8bd8ed`,
         display: `minimal-ui`,
         icon: `static/favicon.png`,
       },
