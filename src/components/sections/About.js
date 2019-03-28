@@ -48,13 +48,12 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>This is heading one</h2>
+              <h2>Speed past the competition</h2>
               <p>
-                Look, just because I don't be givin' no man a foot massage don't
-                make it right for Marsellus to throw Antwone into a glass
-                motherfuckin' house, fuckin' up the way the nigger talks.
-                Motherfucker do that shit to me, he better paralyze my ass,
-                'cause I'll kill the motherfucker, know what I'm sayin'?
+                Gatsby.js builds the fastest possible website. Instead of
+                waiting to generate pages when requested, pre-build pages and
+                lift them into a global cloud of servers — ready to be delivered
+                instantly to your users wherever they are.
               </p>
             </div>
             <Art>
@@ -66,25 +65,23 @@ const About = () => (
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>This is heading two</h2>
+              <h2>Nothing new to learn here</h2>
               <p>
-                Look, just because I don't be givin' no man a foot massage don't
-                make it right for Marsellus to throw Antwone into a glass
-                motherfuckin' house, fuckin' up the way the nigger talks.
-                Motherfucker do that shit to me, he better paralyze my ass,
-                'cause I'll kill the motherfucker, know what I'm sayin'?
+                Enjoy the power of the latest web technologies – React.js ,
+                Webpack , modern JavaScript and CSS and more — all set up and
+                waiting for you to start building.
               </p>
             </div>
           </Grid>
           <Grid>
             <div>
-              <h2>This is heading three</h2>
+              <h2>Grow and build your ideas</h2>
               <p>
-                Look, just because I don't be givin' no man a foot massage don't
-                make it right for Marsellus to throw Antwone into a glass
-                motherfuckin' house, fuckin' up the way the nigger talks.
-                Motherfucker do that shit to me, he better paralyze my ass,
-                'cause I'll kill the motherfucker, know what I'm sayin'?
+                Waste no more time on tooling and performance. Focus on the the
+                site you want to build and nothing more.
+                <br />
+                <br />
+                Gatsby is fast in every way that matters.
               </p>
             </div>
             <Art>

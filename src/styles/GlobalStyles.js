@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     ${props => props.theme.font_size.regular};
+    color: ${props => props.theme.color.black.light};
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {

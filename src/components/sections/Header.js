@@ -30,12 +30,14 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                Build highly <br />
-                performant sites <br />
-                amazingly fast
+                Fast in
+                <br />
+                every way
+                <br />
+                that matters
               </h1>
               <br />
-              <p>with Gatsby of course</p>
+              <p>Gatsby of course</p>
             </Text>
           </Grid>
         </Container>
