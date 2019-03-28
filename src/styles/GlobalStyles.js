@@ -62,6 +62,10 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     cursor: pointer;
   }
+
+  a {
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyles;

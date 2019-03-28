@@ -13,15 +13,15 @@ import { ReactComponent as TwitterIcon } from '@static/icons/twitter.svg';
 const SOCIAL = [
   {
     icon: GithubIcon,
-    link: 'https://github.com/devfolioco/',
+    link: 'https://github.com/ajayns/gatsby-starter-absurd',
   },
   {
     icon: InstagramIcon,
-    link: 'instagram.com',
+    link: 'https://instagram.com/ajay_ns',
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/devfolioco',
+    link: 'https://twitter.com/ajayns08',
   },
 ];
 
