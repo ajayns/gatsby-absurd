@@ -108,7 +108,7 @@ const Art = styled.figure`
   display: flex;
   justify-content: center;
   margin: 0;
-  margin-top: 96px;
+  margin-top: 48px;
 `;
 
 const StyledContainer = styled(Container)`
