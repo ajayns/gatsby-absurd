@@ -7,33 +7,33 @@ import { Section, Container } from '@components/global';
 
 const TEAM = [
   {
-    name: 'Yoda',
-    image: 'yoda.jpeg',
-    role: 'COO',
+    name: 'Josh Peck',
+    image: 'josh.jpg',
+    role: 'Founder',
   },
   {
-    name: 'r2d2',
-    image: 'r2d2.jpeg',
+    name: 'Lisa Haydon',
+    image: 'lisa.jpg',
     role: 'Art Director',
   },
   {
-    name: 'Darth Vader',
-    image: 'darthvader.jpeg',
+    name: 'Ashlyn Harris',
+    image: 'ashlyn.jpg',
     role: 'Frontend Engineer',
   },
   {
-    name: 'Stormtrooper',
-    image: 'stormtrooper.jpeg',
+    name: 'Todd Joseph',
+    image: 'todd.jpg',
     role: 'Designer',
   },
   {
-    name: 'r2d2',
-    image: 'r2d2.jpeg',
+    name: 'Martin White',
+    image: 'martin.jpg',
     role: 'Backend Engineer',
   },
   {
-    name: 'Yoda',
-    image: 'yoda.jpeg',
+    name: 'Rose Leslie',
+    image: 'rose.jpg',
     role: 'Marketing',
   },
 ];
@@ -47,7 +47,7 @@ const Team = () => (
             node {
               relativePath
               childImageSharp {
-                fluid(maxWidth: 200, maxHeight: 200) {
+                fluid(maxWidth: 400, maxHeight: 400) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -150,6 +150,7 @@ const ArtMobile = styled.figure`
 
 const Title = styled.p`
   margin-top: 16px;
+  color: ${props => props.theme.color.black.regular};
 `;
 
 const Subtitle = styled.p`
