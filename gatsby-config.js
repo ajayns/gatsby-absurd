@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `gallery`,
-        path: `${__dirname}/src/images/gallery`,
+        name: `team`,
+        path: `${__dirname}/src/images/team`,
       },
     },
     {

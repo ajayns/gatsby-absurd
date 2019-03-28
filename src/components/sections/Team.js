@@ -42,7 +42,7 @@ const Team = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
+        allFile(filter: { sourceInstanceName: { eq: "team" } }) {
           edges {
             node {
               relativePath
