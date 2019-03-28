@@ -49,7 +49,7 @@ const UsedBy = () => (
           name: { eq: "tell_story" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

@@ -59,7 +59,7 @@ const Team = () => (
           name: { eq: "team_work" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

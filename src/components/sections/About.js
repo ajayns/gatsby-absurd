@@ -14,7 +14,7 @@ const About = () => (
           name: { eq: "fast" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 380) {
+            fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -25,7 +25,7 @@ const About = () => (
           name: { eq: "learn_yourself" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 380) {
+            fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -36,7 +36,7 @@ const About = () => (
           name: { eq: "ideas" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 380) {
+            fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

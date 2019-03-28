@@ -34,7 +34,7 @@ const Footer = () => (
           name: { eq: "customers_pot" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 480) {
+            fluid(maxWidth: 960) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
