@@ -1,6 +1,8 @@
 # gatsby-absurd
 
-An absurd themed Gatsby starter. [absurd.design](https://absurd.design/) by [Diana Valeanu](https://twitter.com/diana_valeanu)is a very fascinating and beautiful project, and being a fan of the concepts I thought I'll quickly wrap it up into a site to see how it looks. That ended up as this Gatsby starter.
+An absurd Gatsby starter. The collection of illustrations, [absurd.design](https://absurd.design/) by [Diana Valeanu](https://twitter.com/diana_valeanu) is a very fascinating and beautiful project with some pretty thoughtful concepts. Experimentation on how that could be put together on a site ended up as this start.
+
+[Live Demo](http://gatsby-absurd.surge.sh/)
 
 ## Installation
 
