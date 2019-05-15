@@ -6,12 +6,12 @@ import Img from 'gatsby-image';
 import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import { ReactComponent as AirbnbLogo } from '@static/logos/airbnb.svg';
-import { ReactComponent as AppleMusicLogo } from '@static/logos/apple-music.svg';
-import { ReactComponent as CokeLogo } from '@static/logos/coca-cola.svg';
-import { ReactComponent as NodeLogo } from '@static/logos/nodejs.svg';
-import { ReactComponent as NikeLogo } from '@static/logos/nike.svg';
-import { ReactComponent as InstagramLogo } from '@static/logos/instagram.svg';
+import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
+import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
+import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
+import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
+import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
+import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
 
 const LOGOS = [
   {
