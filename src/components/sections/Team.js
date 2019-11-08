@@ -77,7 +77,7 @@ const Team = () => (
               ).node;
 
               return (
-                <div>
+                <div key={name}>
                   <Img fluid={img.childImageSharp.fluid} alt={name} />
                   <Title>{name}</Title>
                   <Subtitle>{role}</Subtitle>
