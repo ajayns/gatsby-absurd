@@ -24,7 +24,7 @@ Cleanup cache (often fixes misc errors when run before `yarn dev`):
 
 ## Content
 
-Each of the sections in the site are placed in `src/sections`. Data is usually separated out into objects/arrays to be rendered in the component.
+Each of the sections in the site are placed in `src/components/sections`. Data is usually separated out into objects/arrays to be rendered in the component.
 
 ## SEO
 
